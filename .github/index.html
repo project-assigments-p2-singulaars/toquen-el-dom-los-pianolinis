@@ -24,40 +24,43 @@
       <section class="introduction-container">
         <img src="img/blue-bg.png" class="blue-bg" alt="" />
         <div class="info-container">
-          <h1>Tu marimba virtual</h1>
+          <h1>Tu Marimba Virtual</h1>
           <p>
             Bienvenido a tu piano virtual gratuito. Aquí encontrarás gran
             variedad de instrumentos para que practiques tus dotes musicales
             hasta la perfección
           </p>
-          <a href="">¿Empezamos?</a>
+          <a href="#second-section">¿Empezamos?</a>
         </div>
         <img src="img/icon-start&oyster.svg" class="sea-icons" alt="" />
       </section>
-      <div class="crab-container">
-        <img src="img/grab-icon.svg" class="crab-icon" alt="" />
-      </div>
-      <section class="marimba-container">
-        <span class="first-wood"></span>
-        <div class="instrumet-notes-container">
-          <div data-note="Do" class="key key-1">DO</div>
-          <div data-note="Dob" class="key key-2">DO#</div>
-          <div data-note="Re" class="key key-3">RE</div>
-          <div data-note="Reb" class="key key-4">RE#</div>
-          <div data-note="Mi" class="key key-5">MI</div>
-          <div data-note="Fa" class="key key-6">FA</div>
-          <div data-note="Fab" class="key key-7">FA#</div>
-          <div data-note="Sol" class="key key-8">SOL</div>
-          <div data-note="Solb" class="key key-9">SOL#</div>
-          <div data-note="La" class="key key-10">A</div>
-          <div data-note="Lab" class="key key-11">A#</div>
-          <div data-note="Si" class="key key-12">B</div>
+
+      <section id="second-section" class="marimba-container">
+        <div class="crab-container">
+          <img src="img/grab-icon.svg" class="crab-icon" alt="" />
         </div>
-        <span class="second-wood"></span>
+        <div class="keys-container">
+          <span class="first-wood"></span>
+          <div class="instrumet-notes-container">
+            <div data-note="Do" class="key key-1">DO</div>
+            <div data-note="Dob" class="key key-2">DO#</div>
+            <div data-note="Re" class="key key-3">RE</div>
+            <div data-note="Reb" class="key key-4">RE#</div>
+            <div data-note="Mi" class="key key-5">MI</div>
+            <div data-note="Fa" class="key key-6">FA</div>
+            <div data-note="Fab" class="key key-7">FA#</div>
+            <div data-note="Sol" class="key key-8">SOL</div>
+            <div data-note="Solb" class="key key-9">SOL#</div>
+            <div data-note="La" class="key key-10">A</div>
+            <div data-note="Lab" class="key key-11">A#</div>
+            <div data-note="Si" class="key key-12">B</div>
+          </div>
+          <span class="second-wood"></span>
+        </div>
       </section>
     </main>
-    <audio id="Do" src="audio/DO.mp3"></audio>
-    <audio id="Dob" src="audio/DOb.mp3"></audio>
+    <audio id="Do" src="audio/DOb.mp3"></audio>
+    <audio id="Dob" src="audio/DO.mp3"></audio>
     <audio id="Re" src="audio/RE.mp3"></audio>
     <audio id="Reb" src="audio/REb.mp3"></audio>
     <audio id="Mi" src="audio/MI.mp3"></audio>
@@ -68,6 +71,9 @@
     <audio id="La" src="audio/LA.mp3"></audio>
     <audio id="Lab" src="audio/LAb.mp3"></audio>
     <audio id="Si" src="audio/SI.mp3"></audio>
-  <script type="module" src="script.js"></script>
+    <script type="module" src="script.js"></script>
+    <footer>
+        <p>Los derechos del cangrejito pertenecen a: Adi, Julio, Laura y Matheus</p>
+    </footer>
   </body>
 </html>

@@ -4,11 +4,20 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+  background-color: #b78c41;
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #af500e;
+  border-radius: 6px; 
+}
+
 @font-face {
   font-family: "AkzidenzGrotesk-Regular";
   src: url(./fonts/AkzidenzGrotesk-Regular.otf);
-  /* font-family: "AkzidenzGrotesk-LightOsF";
-    src: url(./fonts/AkzidenzGrotesk-LightOsF.otf);*/
 }
 
 @font-face {
@@ -27,14 +36,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   font-family: "AkzidenzGrotesk-Regular";
   background-color: #e6d7a7;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
+
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -85,9 +98,11 @@ ul {
 
 .menu-items ul li {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: 2px;
+  /* text-shadow: black; */
 }
 
 .introduction-container {
@@ -100,8 +115,9 @@ ul {
 
 .blue-bg {
   position: absolute;
-  top: 0px;
+  top: -1px;
   width: 100%;
+  /* height: 100%; */
 }
 
 .info-container {
@@ -115,7 +131,7 @@ ul {
 }
 
 .info-container h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "AkzidenzGrotesk-Super";
   letter-spacing: 1px;
 }
@@ -123,7 +139,7 @@ ul {
 .info-container p {
   font-family: "AkzidenzGrotesk-Regular";
   width: 55%;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 
 .info-container a {
@@ -135,33 +151,78 @@ ul {
   color: black;
   font-family: "AkzidenzGrotesk-Regular";
   font-weight: bold;
+  z-index: 2;
 }
 
 .sea-icons {
   width: 200px;
   height: 200px;
-  right: 20%;
-  bottom: 0px;
+  right: 300px;
+  bottom: 100px;
   position: absolute;
-}
-
-.crab-container{
-    border: 1px solid red;
-    height: 200px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 .marimba-container {
   width: 90%;
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.crab-container {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.crab-icon {
+  height: 140px;
+  animation: normal forwards infinite;
+  animation-duration: 4s;
+  animation-name: crab;
+}
+
+@keyframes crab {
+  0% {
+    margin-left: -10%;
+    transform: rotate(-5deg);
+  }
+  20% {
+    margin-left: 20%;
+    transform: rotate(15deg);
+  }
+  40%{
+    margin-left: 40%;
+    transform: rotate(-5deg);
+  }
+  60% {
+    margin-left: 60%;
+    transform: rotate(15deg);
+  }
+  80%{
+    margin-left: 80%;
+    transform: rotate(-5deg);
+  }
+  90%{
+    margin-left: 100%;
+    transform: rotate(15deg);
+  }
+  100% {
+    margin-left: 140%;
+    transform: rotate(-5deg);
+  }
+}
+
+.keys-container{
+  width: 100%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 5%;
-  border: 1px solid blue;
 }
 
 .instrumet-notes-container {
@@ -170,7 +231,6 @@ ul {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  border: 2px solid black;
   gap: 5px;
   margin-top: 5%;
 }
@@ -183,6 +243,7 @@ ul {
   align-items: center;
   border-radius: 16px;
   background-color: #b78c41;
+  box-shadow: inset 5px -15px 0px 0px rgba(0, 0, 0, 0.5);
 }
 
 .key {
@@ -195,6 +256,7 @@ ul {
   border-radius: 16px;
   text-align: center;
   cursor: pointer;
+  box-shadow: inset 5px -20px 0px 0px rgba(0, 0, 0, 0.5);
 }
 
 .key-1 {
@@ -202,54 +264,67 @@ ul {
 }
 
 .key-2 {
-  height: 93%;
+  height: 94%;
 }
 
 .key-3 {
-  height: 86%;
+  height: 88%;
 }
 
 .key-4 {
-  height: 79%;
+  height: 82%;
 }
 
 .key-5 {
-  height: 72%;
+  height: 76%;
 }
 
 .key-6 {
-  height: 65%;
+  height: 70%;
 }
 
 .key-7 {
-  height: 58%;
+  height: 64%;
 }
 
 .key-8 {
-  height: 51%;
+  height: 58%;
 }
 
 .key-9 {
-  height: 44%;
+  height: 52%;
 }
 
 .key-10 {
-  height: 37%;
+  height: 46%;
 }
 
 .key-11 {
-  height: 30%;
+  height: 40%;
 }
 
 .key-12 {
-  height: 22%;
+  height: 34%;
 }
 
 .second-wood {
-  height: 250px;
+  height: 350px;
   width: 5%;
   display: flex;
   align-items: center;
   border-radius: 16px;
   background-color: #b78c41;
+  box-shadow: inset 5px -15px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+footer{
+  width: 80%;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p{
+  font-size: 2rem;
 }
