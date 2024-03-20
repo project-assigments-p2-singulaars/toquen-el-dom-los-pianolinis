@@ -31,6 +31,10 @@ body {
   background-color: #e6d7a7;
 }
 main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   width: 100%;
 }
 
@@ -136,23 +140,33 @@ ul {
 .sea-icons {
   width: 200px;
   height: 200px;
-  right: 200px;
+  right: 20%;
   bottom: 0px;
   position: absolute;
 }
 
+.crab-container{
+    border: 1px solid red;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .marimba-container {
-  width: 100%;
+  width: 90%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  margin-top: 5%;
   border: 1px solid blue;
 }
 
 .instrumet-notes-container {
   width: 90%;
-  height: 500px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -162,19 +176,23 @@ ul {
 }
 
 .first-wood {
-  height: 600px;
-  width: 10%;
+  height: 750px;
+  width: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  background-color: yellow;
+  border-radius: 16px;
+  background-color: #b78c41;
 }
 
 .key {
   width: 20%;
-  background: brown;
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #af500e;
+  color: white;
+  border-radius: 16px;
   text-align: center;
   cursor: pointer;
 }
@@ -229,9 +247,9 @@ ul {
 
 .second-wood {
   height: 250px;
-  width: 10%;
+  width: 5%;
   display: flex;
   align-items: center;
-  background-color: yellow;
-  border: 1px solid yellow;
+  border-radius: 16px;
+  background-color: #b78c41;
 }
