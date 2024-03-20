@@ -1,9 +1,7 @@
-const blackKyes =['w','e', 'y','u','i'];
-const whiteKeys = ['a','s', 'd','f','g','h','j','k'];
+const keys = ['a','s', 'd','f','g','h','j','k'];
 
-const notes = document.querySelectorAll('.note');
-const white_key = document.querySelectorAll('.whitekey');
-const black_key = document.querySelectorAll('.blackkey');
+const notes = document.querySelectorAll('.key');
+
 notes.forEach(note =>{
     note.addEventListener('click', ()=> playNote(note))
 });
@@ -11,20 +9,19 @@ notes.forEach(note =>{
 document.addEventListener('keydown', (e)=>{
     if(e.repeat) return
     const key = e.key;
-    const whiteKeyIndex = whiteKeys.indexOf(key);
-    const blackKyesIndex = blackKyes.indexOf(key);
+    const keyIndex = keys.indexOf(key);
 
-    if (whiteKeyIndex > -1)playNote(white_key[whiteKeyIndex]);
-    if (blackKyesIndex > -1)playNote(black_key[blackKyesIndex]);
+    if (keyIndex > -1)playNote(notes[keyIndex]);
      
 })
 
 function playNote(key){
-    const audio = new Audio('assets/sounds/Do.mp3');
-    audio.currentTime = 0;
+    const audio = document.getElementById(key.dataset.note);
+    audio.currentTime = 0.2;
     audio.play();
     key.classList.add('active')
     audio.addEventListener('ended',() =>{
         key.classList.remove('active')
     })
 }
+
