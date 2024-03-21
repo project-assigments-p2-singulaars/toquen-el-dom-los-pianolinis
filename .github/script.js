@@ -1,18 +1,9 @@
-const keys = ["a", "s", "d", "f", "g", "h", "j", "k"];
-
-const keyss = [
-  { noteName: "Do",
-    keyEvent: "a",
-    audioRoute: ".github\audio\DO.mp3"
-    },
-    {
-      noteName: "Do",
-    keyEvent: "a",
-    keyAudio: "./"
-    }
-];
+const LIGHTKEYS = ["a", "s", "d", "f", "g", "h", "j"];
+const DARKKEYS = ["w", "e", "t", "y", "u"];
 
 const notes = document.querySelectorAll(".key");
+const lightKeys = document.querySelectorAll(".key.light");
+const darkKeys = document.querySelectorAll(".key.dark");
 
 notes.forEach((note) => {
   note.addEventListener("click", () => playNote(note));
@@ -21,19 +12,19 @@ notes.forEach((note) => {
 document.addEventListener("keydown", (e) => {
   if (e.repeat) return;
   const key = e.key;
-  const keyIndex = keys.indexOf(key);
+  const lightKeyIndex = LIGHTKEYS.indexOf(key);
+  const darkKeysIndex = DARKKEYS.indexOf(key);
 
-  if (keyIndex > -1) playNote(notes[keyIndex]);
+  if (lightKeyIndex > -1) playNote(lightKeys[lightKeyIndex]);
+  if (darkKeysIndex > -1) playNote(darkKeys[darkKeysIndex]);
 });
 
 function playNote(key) {
   const audio = document.getElementById(key.dataset.note);
-  audio.currentTime = 0.2;
+  audio.currentTime = 0;
   audio.play();
   key.classList.add("active");
-  audio.addEventListener("ended", () => {
+  setTimeout(() => {
     key.classList.remove("active");
-  });
+  }, 100);
 }
-
-
