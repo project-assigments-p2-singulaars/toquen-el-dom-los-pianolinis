@@ -28,3 +28,40 @@ function playNote(key) {
     key.classList.remove("active");
   }, 100);
 }
+
+//cangrejo
+
+document.addEventListener("DOMContentLoaded", function () {
+  let linkStart = document.getElementById("link-start");
+  let crabIcon = document.querySelector(".crab-icon");
+
+  // Agregar evento de clic al enlace "¿Empezamos?"
+  linkStart.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+
+    setTimeout(() => {
+      let audio2 = new Audio("./audio/bajo-el-mar.mp3");
+      audio2.play();
+    }, 1500);
+
+    let audio = new Audio("./audio/bubbles.mp3");
+    
+
+    audio.play();
+
+    // Obtener la distancia hasta la sección #second-section
+    let targetSection = document.querySelector("#second-section");
+    let targetOffset = targetSection.offsetTop;
+
+    // Desplazamiento suave hacia la sección #second-section
+    window.scrollTo({
+      top: targetOffset,
+      behavior: "smooth",
+    });
+
+    // Mostrar el ícono del cangrejo cambiando su estilo de visualización a "block" después del desplazamiento
+    setTimeout(function () {
+      crabIcon.style.display = "block";
+    }, 100); // Puedes ajustar el tiempo de espera según lo desees
+  });
+});
