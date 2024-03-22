@@ -65,3 +65,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100); // Puedes ajustar el tiempo de espera según lo desees
   });
 });
+
+
+function createListenerMenu() {
+  const menuButton = document.getElementById("burguer-icon")
+  const menuElement = document.getElementById("burguer-menu-container")
+  const menuElementMobile = document.querySelector(".menu-mobile")
+  const closeMenu = document.querySelector('#logo-close-menu')
+  
+  menuButton.addEventListener("click", () => {
+    // menuElement.classList.add("menu-mobile");
+    menuElementMobile.classList.toggle('show');
+    console.log("FUNCIONA SUUUUUuuu");
+  }
+  )
+  closeMenu.addEventListener('click', ()=>{
+    menuElement.classList.toggle('hide');
+    menuElementMobile.classList.remove('show');
+  })
+}
+
+createListenerMenu();

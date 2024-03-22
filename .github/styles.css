@@ -17,6 +17,9 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+.menu-mobile{
+  display: none;
+}
 
 /*#region scroll */
 ::-webkit-scrollbar {
@@ -411,9 +414,64 @@ footer p {
   }
   
 .menu-desktop {
-  width: 100%;
-  height: 80px;
   display: none;
+}
+
+#burguer-menu-container{
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 10%;
+  background-color: #30c8d8;
+  z-index: 98;
+}
+#burguer-icon{
+  z-index: 99;
+  width: 100%;
+}
+
+.hide {
+  display: hidden;
+}
+
+.show {
+  display: flex;
+}
+
+.menu-mobile{
+  display: hidden;
+  background-color: #30c8d8;
+  width: 30%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+.logo-container-mobile{
+  width: 100%;
+}
+.logo-container-mobile > img{
+  width: 90%;
+}
+hr{
+  background-color: #FFF;
+  border: none;
+  width: 90%;
+  height: 1px;
+}
+.menu-items-mobile{
+  width: 90%;
+}
+.menu-items-mobile >ul{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .introduction-container {
   align-items: center;
