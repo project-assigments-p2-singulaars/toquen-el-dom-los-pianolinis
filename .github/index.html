@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./img/crab-fav.svg" type="image/x-icon">
+    <title>Los Pianolinis</title>
+  </head>
+
+  <body>
+    <main>
+      <nav class="menu-desktop">
+        <div class="logo-container">
+          <img src="./img/logo.svg" alt="The pianolinis logo" />
+        </div>
+        <div class="menu-items">
+          <ul>
+            <li>Marimba</li>
+            <li>Piano</li>
+            <li>Bateria</li>
+          </ul>
+        </div>
+      </nav>
+      <div id="burguer-menu-container">
+        <img src="./img/menuBurguer.svg" alt="icono menu burguer" id="burguer-icon">
+      </div>
+      <nav class="menu-mobile">
+        <div class="logo-container-mobile">
+          <img src="./img/logo.svg" alt="The pianolinis logo" id="logo-close-menu"/>
+        </div>
+        <hr>
+        <div class="menu-items-mobile">
+          <ul>
+            <li>Marimba</li>
+            <li>Piano</li>
+            <li>Bateria</li>
+          </ul>
+        </div>
+      </nav>
+      <section class="introduction-container">
+        <img src="img/blue-bg.png" class="blue-bg" alt="" />
+        <div class="info-container">
+          <h1>Tu Marimba Virtual</h1>
+          <p>
+            Bienvenido a tu escuela de música gratuita. Aquí encontrarás gran
+            variedad de instrumentos para que practiques tus dotes musicales
+            hasta la perfección
+          </p>
+          <a href="#second-section" id="link-start">¿Empezamos?</a>
+        </div>
+        <img src="img/icon-start&oyster.svg" class="sea-icons" alt="" />
+      </section>
+
+      <section class="marimba-container">
+        <div id="second-section"  class="crab-container">
+          <img src="img/crab-s.png" class="crab-icon" alt="" />
+        </div>
+        <div class="keys-container">
+          <span class="first-wood"></span>
+          <div class="instrumet-notes-container">
+            <div data-note="Do" class="key light key-1"><p>A</p><P>DO</P></div>
+            <div data-note="Dob" class="key dark key-2"><p>W</p><P>DO#</P></div>
+            <div data-note="Re" class="key light key-3"><p>S</p><P>RE</P></div>
+            <div data-note="Reb" class="key dark key-4"><p>E</p><P>RE#</P></div>
+            <div data-note="Mi" class="key light key-5"><p>D</p><P>MI</P></div>
+            <div data-note="Fa" class="key light key-6"><p>F</p><P>FA</P></div>
+            <div data-note="Fab" class="key dark key-7"><p>T</p><P>FA#</P></div>
+            <div data-note="Sol" class="key light key-8"><p>G</p><P>SOL</P></div>
+            <div data-note="Solb" class="key dark key-9"><p>Y</p><P>SOL#</P></div>
+            <div data-note="La" class="key light key-10"><p>H</p><P>LA</P></div>
+            <div data-note="Lab" class="key dark key-11"><p>U</p><P>LA#</P></div>
+            <div data-note="Si" class="key light key-12"><p>J</p><P>B</P></div>
+          </div>
+          <span class="second-wood"></span>
+        </div>
+      </section>
+    </main>
+    <audio id="Do" src="audio/DO.wav"></audio>
+    <audio id="Dob" src="audio/DOsus.wav"></audio>
+    <audio id="Re" src="audio/RE.wav"></audio>
+    <audio id="Reb" src="audio/REsus.wav"></audio>
+    <audio id="Mi" src="audio/MI.wav"></audio>
+    <audio id="Fa" src="audio/FA.wav"></audio>
+    <audio id="Fab" src="audio/FAsus.wav"></audio>
+    <audio id="Sol" src="audio/SOL.wav"></audio>
+    <audio id="Solb" src="audio/SOLsus.wav"></audio>
+    <audio id="La" src="audio/LA.wav"></audio>
+    <audio id="Lab" src="audio/LAsus.wav"></audio>
+    <audio id="Si" src="audio/SI.wav"></audio>
+    <script type="module" src="script.js"></script>
+    <footer>
+        <p>Los derechos del cangrejito y la canción no nos pertenece, pero de lo demas sí </p>
+    </footer>
+  </body>
+</html>
